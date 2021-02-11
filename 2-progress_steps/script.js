@@ -36,4 +36,9 @@ const update = () => {
             circle.classList.remove('active');
         }
     })
+
+    const actives = document.querySelectorAll('.active')
+
+    // set progress class width to correct active circle position (33%, 66%, 100%)
+    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 +'%'
 }

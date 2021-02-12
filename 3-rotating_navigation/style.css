@@ -11,6 +11,8 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+
+/* MAIN CONTAINER */
 .container {
     background-color: #fafafa;
     transform-origin: top left;
@@ -22,6 +24,8 @@ body {
 .container.show-nav {
     transform: rotate(-20deg);
 }
+
+/* NAV CIRCLE */
 .circle-container {
     position: fixed;
     top: -100px;
@@ -37,7 +41,9 @@ body {
     position: relative;
     transition: transform 0.5s linear;
 }
+    /* cirlce container buttons, position and styling */
 .circle button {
+    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,7 +53,6 @@ body {
     font-size: 26px;
     color: white;
 }
-
 .circle button:focus {
     outline: none;
 }
@@ -56,4 +61,67 @@ body {
 }
 .circle button#close {
     top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+/* CONTENT */
+.content img {
+    max-width: 100%;
+}
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.content h1 {
+    margin: 0;
+}
+.content small {
+    color: #555;
+    font-style: italic;
+}
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    padding-left: 30px;
+}
+    /*  nav list style and animation */
+nav ul li {
+    text-transform: uppercase;
+    color: white;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+    /* nav icons */
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+    /* Nav step out positioning to align with container when shown */
+    /* position 2nd li */
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+    /* position 3rd li */
+nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
 }

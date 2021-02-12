@@ -16,7 +16,7 @@ body {
 .container {
     background-color: #fafafa;
     transform-origin: top left;
-    transition: transfrom 0.5s linear;
+    transition: transform 0.5s linear;
     width: 100vw;
     min-height: 100vh;
     padding: 50px;
@@ -41,8 +41,12 @@ body {
     position: relative;
     transition: transform 0.5s linear;
 }
-    /* cirlce container buttons, position and styling */
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+    /* Move .circle when .show-nav exists */
+}
 .circle button {
+    /* cirlce container buttons, position and styling */
     cursor: pointer;
     position: absolute;
     top: 50%;

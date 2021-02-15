@@ -33,7 +33,7 @@ i {
 }
 .btn {
     background-image: linear-gradient(90deg, red, orangered);
-    border: 0;
+    border: solid 4px transparent;
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
@@ -45,7 +45,7 @@ i {
     transition: transform 0.3s ease;
 }
 .btn:focus, .input:focus {
-    outline: none;
+    outline: solid 4px transparent;
 }
 .search.active .input {
     width: 200px;

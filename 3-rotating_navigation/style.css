@@ -53,12 +53,12 @@ body {
     left: 50%;
     height: 100px;
     background: transparent;
-    border: 0;
+    border: solid 4px transparent;
     font-size: 26px;
     color: white;
 }
 .circle button:focus {
-    outline: none;
+    outline: solid 4px transparent;
 }
 .circle button#open {
     left: 60%;

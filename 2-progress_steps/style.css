@@ -77,7 +77,9 @@ body {
 .btn {
     background-color: var(--line-border-fill);
     color: aliceblue;
-    border: 0;
+    /* edited border for accessibility */
+    border: transparent;
+    outline: solid 4px transparent;
     border-radius: 6px;
     cursor: pointer;
     font-family: inherit;
@@ -91,7 +93,8 @@ body {
 }
 
 .btn:focus {
-    outline: 0;
+    /* edited border outline for accessibility */
+    outline: solid 4px transparent;
 }
 
 .btn:disabled {

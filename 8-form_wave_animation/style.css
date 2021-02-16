@@ -52,6 +52,7 @@ body {
 
 /* FORMS */
 .form-control {
+    /* Position relative allows us to position the labels absolute within .form-control */
     position: relative;
     margin: 20px 0 40px;
     width: 300px;
@@ -68,5 +69,27 @@ body {
 }
 .form-control input:focus,
 .form-control input:valid {
+    /* Color change input on focus */
     outline: transparent;
+    border-bottom-color: lightskyblue;
+}
+.form-control label {
+    /* Position the labels within the relative position of .form-control */
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    /* Transistion for smooth Transform used below */
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    /* Color change letters(<span>) of the specific label on focus */
+    color: lightskyblue;
+    /* Transform moves the <span> up on focus */
+    transform: translateY(-30px);
 }

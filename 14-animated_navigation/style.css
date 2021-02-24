@@ -66,3 +66,44 @@ nav ul a {
     text-decoration: none;
     margin: 0 10px;
 }
+
+.icon {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icon:focus {
+    outline: 4px solid transparent;
+}
+
+.icon .line {
+    /* set menu button icon lines */
+    background-color: steelblue;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.8s ease-in-out;
+}
+
+.icon .line2 {
+    /* move line 2 default below top line */
+    top: auto;
+    bottom: 10px;
+}
+
+/* Roation of Icon */
+nav.active .icon .line1 {
+    /* set X icon position of .line1 */
+    transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2 {
+    /* set X icon position of line2 */
+    transform: rotate(765deg) translateY(-5.5px);
+}

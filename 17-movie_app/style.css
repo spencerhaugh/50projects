@@ -103,6 +103,9 @@ main {
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
 }
+.overview h3 {
+    font-weight: bold;
+}
 .movie:hover .overview {
     transform: translateY(0);
 }

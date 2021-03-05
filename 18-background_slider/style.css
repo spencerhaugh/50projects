@@ -14,7 +14,7 @@ body {
     height: 100vh;
     overflow: hidden;
     /* background image info, temp hardcode in an img url, and position center canter (x & y axis), size cover. */
-    background-image: url('https://images.unsplash.com/photo-1578660417802-73249eca1550?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHZhbmFnb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60');
+    /* background-image: url('https://images.unsplash.com/photo-1578660417802-73249eca1550?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHZhbmFnb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60'); */
     background-position: center center;
     background-size: cover;
     transition: 0.4s ease;
@@ -58,12 +58,18 @@ body::before {
 /* Arrow button style and centering */
 .arrow {
     position: fixed;
+    cursor: pointer;
     background-color: transparent;
     padding: 20px;
     font-size: 30px;
     border: 1px solid lightblue;
     top: 50%; /* moves element to middle, but is aligned on the top of the element */
     transform: translateY(-50%); /* moves the y-axis point used to center element, to the center of said element */
+    transition: 0.4s ease;
+}
+.arrow:focus {
+    outline: 2px solid transparent;
+    background-color: lightblue;
 }
 
 /* Arrow button horizontal positioning */

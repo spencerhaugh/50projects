@@ -58,10 +58,10 @@ body {
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: #f0f0f0;
 }
 .needle {
     background-color: var(--primary-color);
+    /* position all needles with the clock face */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -71,6 +71,7 @@ body {
     transform-origin: bottom center;
 }
 
+/* position indivdual needles for proper rotation */
 .needle.hour {
     transform: translate(-50%, -100%) rotate(0deg);
 }
@@ -82,4 +83,56 @@ body {
     transform: translate(-50%, -100%) rotate(0deg);
     height: 100px;
     background-color: tomato;
+}
+
+.center-point {
+    background-color: tomato;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    /* position center */
+    top: 50%;
+    left: 50%;
+    /* position center of element to the center (the above positions rel to the top left corner of element) */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+/* create center dot of center-point */
+.center-point::after {
+    content: '';
+    background-color: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    /* position center */
+    top: 50%;
+    left: 50%;
+    /* position center of element to the center (the above positions rel to the top left corner of element) */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.time {
+    font-size: 60px;
+}
+.date {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+.date .circle {
+    /* style the dot */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    /* center the date number */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    font-size: 12px;
+    transition: all 0.5s ease-in;
 }

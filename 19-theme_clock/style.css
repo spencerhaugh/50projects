@@ -4,14 +4,17 @@
     box-sizing: border-box;
 }
 
+/* LIGHT MODE (aka default) */
 :root {
     --primary-color: #000;
     --secondary-color: #fff;
 }
 
+/* DARK MODE */
 html {
     transition: all 0.5s ease-in;
 }
+/* swap colors */
 html.dark {
     --primary-color: #fff;
     --secondary-color: #333;
@@ -69,6 +72,7 @@ body {
     width: 3px;
     /* set point of rotation */
     transform-origin: bottom center;
+    transition: all 0.5s ease-in;
 }
 
 /* position indivdual needles for proper rotation */

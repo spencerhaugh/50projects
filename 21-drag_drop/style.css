@@ -6,11 +6,43 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: steelblue;
     margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+}
+
+.empty {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: 2px solid #777;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.fill {
+    background-image: url('https://source.unsplash.com/random/150x150');
+    height: 146px;
+    width: 146px;
+    cursor: pointer;
+}
+
+.hold {
+    border: 3px solid #ccc;
+}
+
+.hovered {
+    background-color: #666;
+    border-color: #fff;
+    border-style: dotted;
+}
+
+@media(max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
 }

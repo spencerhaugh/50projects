@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: #2c3e50;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -13,4 +12,54 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+}
+
+.kinetic {
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+.kinetic::after, .kinetic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* create triangles (both) */
+    width: 0;
+    height: 0;
+    border: 50px solid transparent; /* makes a box of border */
+    border-bottom-color: #fff; /* colors bottom border only, which comes to a point because width is 0, but border is 50px */
+    animation: rotateA 2s linear infinite 0.5s; /* rotateA animation, duration 2s, in linear style, goes infinately, delay of 0.5s */
+}
+
+.kinetic::before {
+    transform: rotate(90deg);
+    animation: rotateB 2s linear infinite; /* no delay on this animation to create the bump effect */
+}
+
+@keyframes rotateA {
+    0%, 25% {
+        transform: rotate(0deg);
+    }
+
+    50%, 75% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateB {
+    0%, 25% {
+        transform: rotate(90deg);
+    }
+    50%, 75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(450deg);
+    }
 }

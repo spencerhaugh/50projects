@@ -25,30 +25,33 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
-
 .nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
+/* links */
 .nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
 }
-
 .nav a {
     text-decoration: none;
     color: #fff;
     padding: 7px 15px;
     transition: all 0.3s ease-in-out;
 }
+.nav a.current, .nav a:hover {
+    color: #c0392b;
+}
 
+/* Active Nav (On scroll) */
 .nav.active {
     background-color: #fff;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
@@ -56,13 +59,10 @@ body {
 .nav.active a {
     color: #000;
 }
-.nav a.current, .nav a:hover {
-    color: #c0392b;
-}
-
 .nav.active .container {
     padding: 10px 0;
 }
+
 
 /* HERO AREA */
 

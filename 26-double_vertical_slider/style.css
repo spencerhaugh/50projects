@@ -16,6 +16,7 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    text-transform: capitalize;
 }
 
 .left-slide {
@@ -24,8 +25,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 0.5s ease-in-out;
 }
-.left-slide > div {
+.left-slide div {
     height: 100%;
     width: 100%;
     display: flex;
@@ -47,6 +49,7 @@ body {
     top: 0;
     left: 35%;
     width: 65%;
+    transition: transform 0.5s ease-in-out;
 }
 .right-slide > div {
     background-repeat: no-repeat;
@@ -88,4 +91,29 @@ button:focus {
     transform: translateY(-100%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+@media(max-width: 880px) {
+    .left-slide h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+@media(max-width: 570px) {
+    .left-slide h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+@media(max-width: 435px) {
+    .left-slide h1 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 14px;
+    }
 }

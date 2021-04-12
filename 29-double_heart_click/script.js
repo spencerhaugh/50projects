@@ -37,4 +37,7 @@ const createHeart = (e) => {
 
     // Increment times liked counter
     times.innerHTML = ++likeCounter;
+
+    // Remove the heart div after 1 second
+    setTimeout(() => heart.remove(), 1000);
 };

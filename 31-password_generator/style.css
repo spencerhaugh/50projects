@@ -34,7 +34,7 @@ h2 {
 .result-container {
     background-color: rgba(0,0,0,.4);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     padding: 2% 1.5%;
@@ -44,7 +44,8 @@ h2 {
 }
 .result-container #result {
     word-wrap: break-word;
-    max-width: 90%;
+    margin-right: 5%;
+    text-align: center;
 }
 
 .btn {

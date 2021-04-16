@@ -16,7 +16,21 @@ const randomFunc = {
     symbol: getRandomSymbol
 }
 
-// Listener
+// Clipboard Listener
+clipboard.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerText;
+
+    if (!password) return;
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+})
+
+// Password Generate Listener
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
     const hasLower = lowerEl.checked;
@@ -51,6 +65,7 @@ function getRandomSymbol() {
 }
 
 // Main Function
+// =============
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = '';
     // Remove unselected options
@@ -60,12 +75,12 @@ function generatePassword(lower, upper, number, symbol, length) {
     // Check for selection error
     if (userSelections <= 0) return "Please Make Selections";
 
+    // Loop length times and call 
     for (let i = 0; i < length; i++) {
-        let func = Math.floor(Math.random() * userSelections);
-        let char = Object.keys(userInputArr[func])[0];
+        let funcSelect = Math.floor(Math.random() * userSelections);
+        let char = Object.keys(userInputArr[funcSelect])[0];
         
         generatedPassword +=  randomFunc[char]();
     }
-
     return generatedPassword;
 }

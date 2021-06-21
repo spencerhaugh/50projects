@@ -26,7 +26,7 @@ body {
 }
 
 .note {
-    background-color: '#fff';
+    background-color: #fff;
     box-shadow:  0 10px 4px rgba(0,0,0,.1);
     margin: 30px 20px;
     height: 350px;
@@ -46,6 +46,10 @@ body {
     color: #fff;
     font-size: 1rem;
     margin-left: .5rem;
+}
+
+.note .main {
+    padding: 1rem;
 }
 
 .note textarea {

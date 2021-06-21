@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+</head>
+<body>
+    <button class="add" id="add">
+        <i class="fas fa-plus">Add Note</i>
+    </button>
+
+    <div class="note">
+        <div class="tools">
+            <button class="edit"><i class="fas fa-edit"></i></button>
+            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+        </div>
+
+        <div class='hidden'></div>
+        <textarea></textarea>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.1/marked.min.js" integrity="sha512-vDOU8ILVjHjOiDqh/68otCA4jVnZWIsvdi3YWtOecp9V4xrKdkmtI+O8ifj84hJtLh28D9kD42lM9rs63p4Grg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

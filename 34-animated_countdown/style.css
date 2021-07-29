@@ -44,6 +44,7 @@ h4 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
+    text-align: center;
 }
 
 .final.show {
@@ -81,12 +82,12 @@ h4 {
 }
 
 .nums span.in {
-    animation: goOut .5s ease-in-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: goIn .5s ease-in-out;
 }
 
 .nums span.out {
-    transform: translate(-50%, -50%) rotate(0deg);
-    animation: goIn .5s ease-in-out;
+    animation: goOut .5s ease-in-out;
 }
 
 @keyframes goIn {
@@ -112,6 +113,6 @@ h4 {
         transform: translate(-50%, -50%) rotate(20deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(-100deg);
+        transform: translate(-50%, -50%) rotate(-120deg);
     }
 }

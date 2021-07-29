@@ -11,6 +11,12 @@ body {
     overflow: hidden;
 }
 
+h4 {
+    font-size: 2rem;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
 .counter {
     position: fixed;
     left: 50%;
@@ -54,5 +60,58 @@ body {
     }
     100% {
         transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.nums {
+    color: skyblue;
+    font-size: 5rem;
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    height: 5rem;
+}
+
+.nums span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(120deg);
+    transform-origin: bottom center;
+}
+
+.nums span.in {
+    animation: goOut .5s ease-in-out;
+}
+
+.nums span.out {
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: goIn .5s ease-in-out;
+}
+
+@keyframes goIn {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes goOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-100deg);
     }
 }

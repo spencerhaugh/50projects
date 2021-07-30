@@ -6,11 +6,19 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: thistle;
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
 }
 
 img {

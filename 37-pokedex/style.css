@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 * {
     box-sizing: border-box;
@@ -19,7 +19,7 @@ h1 {
     letter-spacing: 3px;
 }
 
-poke-container {
+.poke-container {
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
@@ -63,4 +63,6 @@ poke-container {
 
 .pokemon .info .name {
     margin: 15px 0 7px;
+    text-transform: uppercase;
+    font-size: .8em;
 }

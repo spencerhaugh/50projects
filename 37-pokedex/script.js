@@ -14,6 +14,7 @@ const colors = {
     psychic: '#eaeda1',
     flying: '#f5f5f5',
     fighting: '#e6e0d4',
+    ice: '#89dddd',
     normal: '#e5e5e5'
 }
 
@@ -28,18 +29,23 @@ const getPokemon = async (id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const res = await fetch(url);
     const data = await res.json();
-    // console.log(data);
 
     const bgColor = colors[data.types[0].type.name];
     const pokeImg = data.sprites.front_default;
+
     const getPokeTypes = () => {
         let typeList = '';
         data.types.forEach(t => {
-            typeList = typeList + ' ' + t.type.name;
+            let capitalType = t.type.name[0].toUpperCase() + t.type.name.slice(1);
+            if (typeList) { 
+                typeList = typeList + ', ' + capitalType 
+            } else { typeList = capitalType }
         })
         return typeList;
-    }
+    };
+
     const pokeTypes = getPokeTypes();
+    
     const getUpdatedId = (id) => {
         let updatedId ='';
         if (id < 10) {
@@ -65,9 +71,8 @@ const getPokemon = async (id) => {
                 <small class="type">Type: <span>${pokeTypes}</span></small>
             </div>
     `
-    // console.log(newCard)
 
-    poke_container.appendChild(newCard)
-}
+    poke_container.appendChild(newCard);
+};
 
 fetchPokemon();

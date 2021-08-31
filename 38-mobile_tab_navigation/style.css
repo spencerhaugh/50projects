@@ -61,6 +61,7 @@ nav li {
     padding: 10px;
     flex: 1;
     text-align: center;
+    transition: color .4s ease;
 }
 
 nav ul li p {
